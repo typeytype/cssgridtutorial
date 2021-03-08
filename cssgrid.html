@@ -1,3 +1,7 @@
+<!-- The HTML code begins with some universal code in the <head> tag for .html files. You won't see this code literally on the webpage itself. The document type is defined as html, the language as English and a uniform character set is subscribed to. The .html file also starts off by attempting to regulate what the user sees in their viewport, across different sized viewports, but as you will see in the .css file this effort requires more than this one line of meta. The .css file is linked to enable the styling of some otherwise uniform .html code. Find out more about the .css file in the .css file itself.
+
+Now the <head> begins to become specific to this page. A font is linked to allow usage in the .css file. Finally the page is given the title you see on the tab or window in your browser. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +13,12 @@
     <title>CSS Grid Tutorial</title>
 </head>
 
+
+<!-- The <body> is what we will see literally on the webpage. Tables, text and images and more can be placed into our webpage in the <body> is divided into two parts. There is an #initialinfo section and a #mainbody section. These are divided so that separated styling can be applied to these two areas. These two areas will in the final product be two separate CSS Grids. -->
 <body>
     <h1 class=callout id=callout1>Check out these pages:</h1>
+
+    <!-- Now the first grid begins in the form of the <div> #initialinfo. It is divided into one parent element, three smaller elements each containing an <img> element that in a clickable link to another part of the site. The use of simple and attention grabbing visuals on your landing page will help convert leads. Finally the grid is closed to ensure the program doesn't think anything else should feature in our grid.  -->
     <div class=uppergridspace id=initialinfo>
         <a href='https://mrmontyhall.com/aboutme'><div class=uppergridspacebox id=info1>
             <img src=https://mrmontyhall.com/images/workedit.png class=uppergridspaceboxpic id=boxpic1>
@@ -23,6 +31,8 @@
         </div></a>
     </div>
 
+
+    <!-- Here is the second grid. It is similar to the first. However, there are six elements, and within each of the six elements are three further elements, making for a total of eighteen elements, or nineteen if we include the exterior grid <div> #mainbody. What is different here is that there are grids within the grid ie the three elements in any of our six elements are arranged in a grid formation, in addition to the six parent elements being arranged in a grid formation within our grandparent element, the <div> #mainbody. Other than that, the logic of opening and closing divs remains. -->
     <h1 class=callout id=callout2>For anything else:</h1>
     <div class=gridspace id=mainbody>
         <a href='https://mrmontyhall.com/business'><div class=gridspacebox id=main1>
@@ -87,6 +97,6 @@
         </div></a>
     </div>
 
-
+<!-- Finally, remember to close your tags if you want a page that loads correctly! -->
 </body>
 </html>

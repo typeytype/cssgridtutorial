@@ -1,8 +1,17 @@
+/* This is the .css file. It is different from the .html file because here you aren't inserting elements into your page, such as text, tables and images. In the .css file you are styling the elements on your page. This means you are moving things around, styling them with colour and maybe animating them with movement. There is an immense amount of things that you can do with CSS to change the look of your site. This CSS tutorial will walk you everything you need to create a webpage that will draw users in. */
+
+
+/* When .css files are processed by the web browsers, the lowest lines of code are given the highest priority. What this means is that any code can be overruled by another line of code that comes on a lower line. For example, if you describe a heading as blue on line 5 and then red on line 10, the heading will be red once the web browser has loaded the webpage. This is a fundamental concept of CSS and you should remember this whenever you need to figure out why things aren't behaving as you might expect. */
+
+/* To begin with some general style principles need to be asserted. The code beings as general as possible and homes in on the details - so here the code begins by defining the style of the <body>. Remember, you don't see the <head> of the .html file, so this is as widely and as general as a .css file can describe. Here the font of the page is defined - a Google font is used because we have linked to it in the <head> of our .html file - and a backup font is defined in case the Google font cannot be accessed. A background colour is defined and the text is aligned to center. */
+
 body {
     font-family: Poppins, 'sans serif';
     background-color: #d3d3d3;
     text-align: center;
 }
+
+/* The code continues to describe general principles. Here it defines how links should appear. Because large amounts of text on a homepage can be clicked to navigate to a new page, and these links are often clicked and a page often returned to, a neutral style is selected so that specific links can be styled on a case-by-case basis on the page. */
 
 a:link {
     color: black;
@@ -14,19 +23,22 @@ a:visited {
     text-decoration: none;
 }
 
-/* Below is the smaller, upper grid programmed mobile first */
 
+/* Below is the smaller, upper grid programmed mobile first. Mobile first design is a development principle that means when you develop a website, you code for mobiles on the highest line possible of your code. This means that mobiles, typically less powerful processors than computers, can more easily and quickly access the data relevant to them. Ultimately this improves the user experience on mobile. With around 50% of all web traffic being mobile, this is an essential principle to follow if you care for the user experience.
+
+Here the code calls a class of <div> labelled .uppergridspace. The prefix '.' denotes a class. This is a grouping of like elements that is used to access them all simultaneously. The width is defined as 100% ie across as much space as it can access within its current <div>. The margin is defined to center the elements. Finally a grid is defined with columns and gaps described to suit the mobile screen. */
 
 .uppergridspace {
     width: 100%;
-    display: grid;
     margin: auto;
+    display: grid;
     grid-gap: 8vh;
     grid-template-columns: (300px, 1);
     justify-items: center;
     
 }
 
+/* Now the code defines the sectors of our grid. Mostly this is stylistic as the spaces have been defined, such as borders, backgrounds and animations. However the sizing of the sectors can break a grid, even past predefined limits, so pay careful attention to your width and height here. */
 
 .uppergridspacebox {
     background-color: white;
@@ -45,6 +57,7 @@ a:visited {
     transform: scale(1)
 }
 
+/* An onhover animation is given to the grid sectors. */
 .uppergridspacebox:hover {
     cursor: pointer;
     transition: all 0.3s;
@@ -52,6 +65,7 @@ a:visited {
 
 }
 
+/* <img> elements are allowed to fit into their sector which helps keep them in the desired proportion and within the desired bounds. */
 .uppergridspaceboxpic {
     object-fit: fill; 
     width: 100%;
@@ -60,6 +74,9 @@ a:visited {
  
 }
 
+/* This is a media query. What this means is that the screen size of the device will be detected and the website will be transformed accordingly. Whenever people discuss responsiveness and responsive web design, media queries should be central to this discussion. The media query begins with a detection limit of screen size. Then elements are styled if this condition is satisfied ie if the screen is detected as a certain size: in this case greater than 450px wide. It is important to put media queries after your mobile code, for the reasons discussed above in the mobile first design note. */
+
+/* Below is the media query for the uppergridspace for mobile screens of a larger dimension. */
 @media (min-width: 450px) {
     .uppergridspacebox {
     max-width: 400px;
@@ -67,7 +84,7 @@ a:visited {
 }
 }
 
-/* Below is the media query for tablet screens */
+/* Below is the media query for tablet screens. */
 
 @media (min-width: 800px) {
     #logo {
@@ -113,6 +130,8 @@ a:visited {
         padding-top: 2vh;
     }
 
+/* Here you can see the grid becoming a little more complex. This is because we are manually defining where each sector should appear in the grid-template-areas line of code. This wouldn't need to be in any particular order than the one you desired, despite this one ascending from info1 to info3. In this case the elements are arranged is a simple row in a particular order, however grid-template-areas is a powerful tool that can be used to implement uneven grid spacing, with larger grid sectors and even empty sectors. */
+
     .uppergridspace {
         display: grid;
         margin: auto;
@@ -140,12 +159,12 @@ a:visited {
     max-height: 228px;
 }
 
+
+/* Remember your closing brackets on your media query! */
 }
 
 
-
-
-
+/* And now you're back to coding for mobile, as you have left your media query notation behind. */
 
 .gridspace {
     display: grid;
@@ -213,7 +232,7 @@ a:visited {
 
 
 
-/* Below is the larger, lower grid on tablet screens */
+/* Below is the larger, lower grid on tablet screens. */
 
 @media (min-width: 800px) {
     .gridspace {
