@@ -3,7 +3,7 @@
 
 /* When .css files are processed by the web browsers, the lowest lines of code are given the highest priority. What this means is that any code can be overruled by another line of code that comes on a lower line. For example, if you describe a heading as blue on line 5 and then red on line 10, the heading will be red once the web browser has loaded the webpage. This is a fundamental concept of CSS and you should remember this whenever you need to figure out why things aren't behaving as you might expect. */
 
-/* To begin with some general style principles need to be asserted. The code beings as general as possible and homes in on the details - so here the code begins by defining the style of the <body>. Remember, you don't see the <head> of the .html file, so this is as widely and as general as a .css file can describe. Here the font of the page is defined - a Google font is used because we have linked to it in the <head> of our .html file - and a backup font is defined in case the Google font cannot be accessed. A background colour is defined and the text is aligned to center. */
+/* To begin with some general style principles need to be asserted. The code begins as general as possible and homes in on the details - so here the code begins by defining the style of the <body>. Remember, you don't see the <head> of the .html file, so this is as widely and as general as a .css file can describe. Here the font of the page is defined - a Google font is used because we have linked to it in the <head> of our .html file - and a backup font is defined in case the Google font cannot be accessed. A background colour is defined and the text is aligned to center. */
 
 body {
     font-family: Poppins, 'sans serif';
@@ -74,7 +74,7 @@ Here the code calls a class of <div> labelled .uppergridspace. The prefix '.' de
  
 }
 
-/* This is a media query. What this means is that the screen size of the device will be detected and the website will be transformed accordingly. Whenever people discuss responsiveness and responsive web design, media queries should be central to this discussion. The media query begins with a detection limit of screen size. Then elements are styled if this condition is satisfied ie if the screen is detected as a certain size: in this case greater than 450px wide. It is important to put media queries after your mobile code, for the reasons discussed above in the mobile first design note. */
+/* This is a media query. What this means is that the screen size of the device will be detected and the website will be transformed accordingly. Whenever people discuss responsiveness and responsive web design, media queries should be central to this discussion. The media query begins with a detection of viewport dimensions, or more simply put it measures the screen size against our predefined limit. Then elements are styled if this condition is satisfied ie if the screen is detected as a certain size: in this case greater than 450px wide. It is important to put media queries after your mobile code, for the reasons discussed above in the mobile first design note. */
 
 /* Below is the media query for the uppergridspace for mobile screens of a larger dimension. */
 @media (min-width: 450px) {
@@ -130,7 +130,7 @@ Here the code calls a class of <div> labelled .uppergridspace. The prefix '.' de
         padding-top: 2vh;
     }
 
-/* Here you can see the grid becoming a little more complex. This is because we are manually defining where each sector should appear in the grid-template-areas line of code. This wouldn't need to be in any particular order than the one you desired, despite this one ascending from info1 to info3. In this case the elements are arranged is a simple row in a particular order, however grid-template-areas is a powerful tool that can be used to implement uneven grid spacing, with larger grid sectors and even empty sectors. */
+/* Here you can see the grid becoming a little more complex. This is because we are manually defining where each sector should appear in the grid-template-areas line of code. This wouldn't need to be in any particular order than the one you desired, despite this one ascending from info1 to info3. In this case the elements are arranged in a simple row in a particular order, however grid-template-areas is a powerful tool that can be used to implement uneven grid spacing, with larger grid sectors and even empty sectors. */
 
     .uppergridspace {
         display: grid;
